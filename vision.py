@@ -12,7 +12,11 @@ def detect_text(path):
     isnumber = 1
     list = str.split(texts[0].description)
     print(list[0])
+    import requests
+    url = 'http://169.233.251.177:4000/api/img-lookup'
+    myobj = {'housenumber': list[0]}
+    x = requests.post(url, data = myobj)
 
-detect_text("firstimg.jpg")
+detect_text("secondimg.jpg")
 
 
